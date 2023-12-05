@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #303030; /* Cambiado a un tono más oscuro */
+    color: #fff;
+}
+
+header {
+    background-color: #3572b0; /* Cambiado a un tono más oscuro */
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+}
+
+header img {
+    max-width: 30%;
+    height: revert-layer;
+    stop-color: azure;
+}
+
+
+section {
+    padding: 18px;
+}
+
+h1, h2, h3 {
+    color: #fff;
+    text-align: center;
+}
+
+p {
+    color: #ccc; /* Cambiado a un tono más claro */
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+header {
+    background-color: #3572b0;
+    padding: 19px;
+    text-align: center;
+    color: #fff;
+}
+
+header img {
+    max-width: 35%;
+    height: revert-layer;
+}
+
+section {
+    padding: 30px;
+}
+
+h3{
+    color: #000;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #fff;
+    text-align: center;
+}
+
+p {
+    color: #000;
+}
+
+/* Estilos para el cuadro negro alrededor del código */
+pre {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Estilos para el código dentro del cuadro negro */
+code {
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+}
+
+/* Estilos para el botón flotante */
+.download-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3572b0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.download-button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos para las imágenes en el Capítulo 1 */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente las imágenes */
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 10px;
+}
+
+

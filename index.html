@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Guía práctica para el uso de Python en bases de datos</title>
+</head>
+
+<body>
+    <header>
+        <img src="https://imgs.search.brave.com/Lx5jH_YkDeGwOtEgVOPotWy5AUTZFinGAnzSuHGcAYM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9sb2dv/ZG93bmxvYWQub3Jn/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDE5/LzEwL3B5dGhvbi1s/b2dvLnBuZw"
+            alt="Imagen de portada">
+        <h1>Guía práctica para el uso de Python en bases de datos</h1>
+        <h2>Una guía completa para desarrolladores que buscan explorar las posibilidades de Python en bases de datos
+        </h2>
+    </header>
+
+    <section id="introduccion">
+        <h3>Introducción</h3>
+        <p>Python es un lenguaje de programación versátil y de alto nivel, ampliamente utilizado en el desarrollo de
+            aplicaciones web, científicas y, en este caso, en la manipulación de bases de datos.</p>
+        <p>En esta guía, exploraremos la importancia del uso de Python en el contexto de las bases de datos, destacando
+            su flexibilidad y facilidad de aprendizaje.</p>
+        <p>Los objetivos del manual incluyen proporcionar a los lectores una guía completa para desarrollar en Python
+            con bases de datos, con ejemplos prácticos y explicaciones detalladas.</p>
+    </section>
+
+    <section id="desarrollo">
+
+        <article>
+            <h3>Capítulo 1: Configuración del entorno de desarrollo</h3>
+            <p>Exploraremos las herramientas necesarias para comenzar a desarrollar con Python, incluyendo la
+                instalación de Python, la elección de un IDE como Visual Studio Code o PyCharm, entre otros.</p>
+            <p>Este capítulo proporcionará un procedimiento paso a paso para la configuración del entorno, asegurando
+                que los lectores estén listos para comenzar su viaje con Python y bases de datos.</p>
+
+            <!-- Imágenes enlazadas a un link -->
+            <div class="image-container">
+                <a href="https://code.visualstudio.com/docs/?dv=win64user&build=insiders" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="https://imgs.search.brave.com/jCRZPru9p9ePwhbcZ_aaEynnHL0mXD5-kWoRrgBSRv8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9sb2dv/d2lrLmNvbS9jb250/ZW50L3VwbG9hZHMv/aW1hZ2VzL3Zpc3Vh/bC1zdHVkaW8tY29k/ZTc2NDIuanBn"
+                        alt="Imagen 1">
+                </a>
+                <a href="https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows"
+                    target="_blank" rel="noopener noreferrer">
+                    <img src="https://imgs.search.brave.com/TyMB9sSHmWAJjblz6_DNaoZypfjIHqZs-6QejOg__7s/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9zZWVr/bG9nby5jb20vaW1h/Z2VzL1AvcHljaGFy/bS1lZHUtbG9nby03/MzExOUIyRTA5LXNl/ZWtsb2dvLmNvbS5w/bmc"
+                        alt="Imagen 2">
+                </a>
+            </div>
+        </article>
+
+        <article>
+            <h3>Capítulo 2: Conectar Python con base de datos</h3>
+            <p>Este capítulo se centrará en la conexión de Python con diversas bases de datos. Se explicarán los
+                conceptos fundamentales y se ofrecerá un ejemplo práctico, demostrando cómo conectar Python a una base
+                de datos MySQL utilizando el paquete mysql-connector-python.</p>
+
+            <!-- Ejemplo de código Python con explicación -->
+            <pre>
+                <code>
+                    import mysql.connector
+
+                    # Configuración de la conexión a la base de datos
+                    connection = mysql.connector.connect(
+                        host="localhost",
+                        user="usuario",
+                        password="contraseña",
+                        database="nombre_base_de_datos"
+                    )
+
+                    # Crear un cursor para ejecutar consultas SQL
+                    cursor = connection.cursor()
+
+                    # Ejemplo de consulta SQL
+                    query = "SELECT * FROM tabla"
+                    cursor.execute(query)
+
+                    # Obtener resultados
+                    results = cursor.fetchall()
+
+                    # Imprimir resultados
+                    for row in results:
+                        print(row)
+
+                    # Cerrar cursor y conexión
+                    cursor.close()
+                    connection.close()
+                </code>
+            </pre>
+            <p>En el ejemplo anterior, se muestra cómo conectar Python a una base de datos MySQL y realizar una
+                consulta. Asegúrate de cambiar las credenciales y la información de la base de datos según tus
+                configuraciones.</p>
+        </article>
+
+        <article>
+            <h3>Capítulo 3: Consultas, Altas, Bajas, etc. en Python</h3>
+            <p>Exploraremos cómo realizar consultas, altas, bajas y otras operaciones en bases de datos utilizando
+                Python. Se proporcionarán ejemplos prácticos para ilustrar estas operaciones.</p>
+
+            <!-- Ejemplo de código Python con explicación -->
+            <pre>
+                <code>
+                    import sqlite3
+
+                    # Conexión a la base de datos SQLite (se crea si no existe)
+                    connection = sqlite3.connect("mi_base_de_datos.db")
+
+                    # Crear un cursor para ejecutar comandos SQL
+                    cursor = connection.cursor()
+
+                    # Ejemplo de consulta SQL
+                    query = "SELECT * FROM usuarios"
+                    cursor.execute(query)
+
+                    # Obtener resultados
+                    results = cursor.fetchall()
+
+                    # Imprimir resultados
+                    for row in results:
+                        print(row)
+
+                    # Cerrar cursor y conexión
+                    cursor.close()
+                    connection.close()
+                </code>
+            </pre>
+            <p>En este ejemplo, se muestra cómo conectar Python a una base de datos SQLite y realizar una consulta.
+                Asegúrate de ajustar la consulta y los nombres de las tablas según tu configuración.</p>
+        </article>
+
+    </section>
+
+    <section id="conclusiones">
+        <h3>Conclusiones y recomendaciones</h3>
+        <p>Es importante destacar la importancia de comenzar con lo básico al aprender algo nuevo. Al centrarse en los
+            fundamentos, se establece una base sólida que facilita la comprensión de conceptos más avanzados. Al mismo
+            tiempo, la aplicación práctica a través de proyectos concretos proporciona una experiencia valiosa y ayuda a
+            consolidar el conocimiento.</p>
+        <p>Es recomendable abordar proyectos que te desafíen, pero que sean alcanzables con tus habilidades actuales.
+            Esto fomentará el aprendizaje continuo a medida que te enfrentas a nuevos problemas y resuelves desafíos
+            prácticos. La práctica constante es clave para el desarrollo de habilidades técnicas y la construcción de
+            confianza en tus capacidades.</p>
+        <p>Además, la participación en proyectos te permitirá explorar áreas específicas que te interesen más y te
+            brindará la oportunidad de especializarte a medida que avanzas en tu aprendizaje. Recuerda que el progreso
+            puede llevar tiempo, así que sé paciente contigo mismo y disfruta del proceso de aprendizaje.</p>
+    </section>
+
+    <section id="bibliografia">
+        <h3>Bibliografía</h3>
+        <p>Esta son unas de los link que te recomiendo pero te menciono no te quedes con lo poco que tienes en la mano
+        </p>
+        tiene oportunidad de profundizar en los temas tratados a tu rigmo</p>
+        <ul>
+            <li><a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">Documentación de
+                    Python</a></li>
+            <li><a href="https://dev.mysql.com/doc/connector-python/en/" target="_blank"
+                    rel="noopener noreferrer">Documentación de mysql-connector-python</a></li>
+            <li><a href="https://docs.python.org/3/library/sqlite3.html" target="_blank"
+                    rel="noopener noreferrer">Documentación de sqlite3 en Python</a></li>
+        </ul>
+    </section>
+
+    <!-- Botón flotante para descargar Python -->
+    <div class="download-button">
+        <a href="https://www.python.org/ftp/python/3.12.0/python-3.12.0-amd64.exe" target="_blank"
+            rel="noopener noreferrer">
+            Descarga Python
+        </a>
+    </div>
+
+</body>
+
+</html>
